@@ -16,7 +16,7 @@ Configure the environment variables before to launch the container. The followin
 
 <pre>
 ]$ export MOUNT_POINT=/mnt
-]$ export ONECLIENT_ACCESS_TOKEN='<Add here your access token>'
+]$ export ONECLIENT_ACCESS_TOKEN='Add here your access token'
 ]$ export ONECLIENT_PROVIDER_HOST=plg-cyfronet-01.datahub.egi.eu
 </pre>
 
