@@ -16,7 +16,7 @@ To generate your personal access token using the web interface, please follow th
 * Clink on <b>"Create new access token"</b>
 * Store the token somewehere safe.
 
-How to generate your access token with REST API will be introduced in Exercise no.4
+How to generate your access token with REST API will be introduced in Exercise no.4 (see below)
 
 ## Access the EGI Training Infrastructure
 Use your personal account to access the [EGI Training infrastructure](https://wiki.egi.eu/wiki/Training_infrastructure)
