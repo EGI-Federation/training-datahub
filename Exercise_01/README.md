@@ -1,8 +1,8 @@
 # Exercise no.01 - Testing oneclient from the “client Docker” container
 
 In this exercise we learn how to 
-* Use the Docker container with the already installed oneclient (see below <pre>`sudo docker run`</pre> command).
-* Mount the current working directory ($PWD) in the Docker container (under <pre>/mnt/src</pre>).
+* Use the Docker container with the already installed oneclient (see below `sudo docker run` command).
+* Mount the current working directory ($PWD) in the Docker container (under `/mnt/src`).
 
 ## Requirements
 * Access the EGI Training infrastructure (see section before).
