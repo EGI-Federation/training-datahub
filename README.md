@@ -33,13 +33,6 @@ This repository includes the following exercises:
 - [Register the result of the analysis in Zenodo general-purpose open-access repository](pyZenodo)
 - [How to generate an ACCESS_TOKEN via REST API](pyDataHub)
 
-## Contribute
-- Fork it
-- Create a branch (git checkout -b my_markup)
-- Commit your changes (git commit -am "My changes")
-- Push to the branch (git push origin my_markup)
-- Create an Issue with a link to your branch
-
 ## License
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
 
