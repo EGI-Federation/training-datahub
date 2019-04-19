@@ -16,7 +16,7 @@ In this exercise we learn how to:
 * For the quick start tutorial you need the following Scopes: `deposit:write` and `deposit:actions`.
 
 <p style="text-aligh:center">
-<img heigh=100 src="./Zenodo_Access_Token.png">
+<img heigh=90 src="./Zenodo_Access_Token.png">
 </p>
 
 ## Notes:
@@ -72,9 +72,11 @@ Type "help", "copyright", "credits" or "license" for more information.
            params={'access_token': ZENODO_ACCESS_TOKEN},
            data=data, files=file)
 >>> print response.json()
+</pre>
 
 ### Add metadata to the file before upload
 
+<pre>
 >>> data = {
        'metadata': {
                'title': 'Apple stock prices over time',
@@ -95,12 +97,16 @@ Type "help", "copyright", "credits" or "license" for more information.
 			data=json.dumps(data),
 				    headers=headers)
 >>> print response.json()
+</pre>
 
 ### Publish entry in Zenodo open-access repository
+
+<pre>
 >>> file_uri = '%s/%s/actions/publish' % (zenodo_uri, deposition_id)
 >>> response = requests.post(file_uri, 
            params={'access_token': ZENODO_ACCESS_TOKEN})
 >>> print response.json()
+</pre>
 
 #### Check the uploaded file in Zenodo open-access repository
 
