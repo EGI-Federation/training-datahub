@@ -1,50 +1,39 @@
-# Exercise no.02
-This is a Java library to render <a href="http://occi-wg.org/about/specification/">Open Cloud Computing Interface (OCCI)</a> queries.
-Detailed documentation is available in the project <a href="https://github.com/EGI-FCTF/jOCCI-api/wiki">wiki</a>.
+# Exercise no.02 - Analyse datasets stored in the Onedata volume space
 
-## Compile and Run
+In this exercise we learn how to:
 
-Access the maven project
+* Analyse the datasets stored in the volume space (filename = stocks.csv).
+* Generate plot of the stock prices over time.
 
-```cd di4r-training/jOCCI-dump-model/```
+## Requirements
+* Access the EGI Training infrastructure (see previous exercise).
+* Generate the token to access the Onedata volume space (see previous exercise).
+* Install missing libraries (see previous exercise).
+* Mount the volume space with the datasets (see previous exercise).
 
-Edit the source code in `src/main/java/it/infn/ct/Exercise1.java` to use your preferred VO and provider endpoint :
-```
-[..]
-String OCCI_ENDPOINT_HOST = "https://carach5.ics.muni.cz:11443"; // <= Change here!
-String VO = "training.egi.eu";  // <= Change here!
-```
+<b>IMPORTANT NOTICE: We are using Python (v2.7.12) and the following libraries: `requests`, `csv` and `matplotlib (v1.5.3)` to analyse the datasets. If you are confident with other programming language and/or libraries, feel free to install additional libraries in the running container.</b>
 
-Compile and package with maven:
-```
-$ mvn compile && mvn package
-```
+## Dataset
+The datasets to be analysed are available in the volume space (EGI Foundation/CSV/stock.csv) and have the following structure:
 
-Run (you may redirect the output to a file):
-```
-$ java –jar target/jocci-dump-model-1.0-jar-with-dependencies.jar
-```
+Add figure here..
 
+In column B are reported the final values of the Apple stock at the end of the day.
 
-## Dependencies
+## Hands-on
 
-jOCCI-dump-model uses:
-- jocci-api (v0.2.6)
-- slf4j-jdk14 (v1.7.12)
+* Plot the Apple stock prices over time.
+* Save the resulted plot image.
 
-These are already included in the Maven pom.xml file and automatically downloaded when building.
+## Hints
+Hint1: 
+`→ ]$ pip install pandas`
 
-You can also add them to your projects with:
+Hint2:
+ → In python run matplotlib.use('agg') before matplotlib.pyplot is imported anywhere, otherwise plt.plot() won't work
 
-    <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-jdk14</artifactId>
-        <version>1.7.12</version>
-    </dependency>
+Hint3:
+→ use `plt.savefig('fname.png')` to save figure in container.
+→ then do `sudo docker cp <containerId>:/file/path/within/container /host/path/target` to copy file from the Docker container to your  VM account. 
+→ use the `display` command to check the file image.
 
-    <dependency>
-        <groupId>cz.cesnet.cloud</groupId>
-        <artifactId>jocci-api</artifactId>
-        <version>0.2.6</version>
-        <scope>compile</scope>
-    </dependency>
