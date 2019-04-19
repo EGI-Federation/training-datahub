@@ -23,7 +23,7 @@ Use your personal account to access the [EGI Training infrastructure](https://wi
 
 ]$ ssh -X <your_user_account>@212.189.145.XX
 
-if you do not have a valid account, please contact: support@egi.eu
+if you do not have a valid account, please contact: giuseppe <dot> larocca <at> egi.eu
 
 ## Available Exercises
 
