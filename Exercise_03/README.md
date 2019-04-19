@@ -16,7 +16,7 @@ In this exercise we learn how to:
 * For the quick start tutorial you need the following Scopes: `deposit:write` and `deposit:actions`.
 
 <p style="text-aligh:center">
-<img heigh=90 src="./Zenodo_Access_Token.png">
+<img heigh=80 src="./Zenodo_Access_Token.png">
 </p>
 
 ## Notes:
@@ -113,13 +113,13 @@ Type "help", "copyright", "credits" or "license" for more information.
 Click on the "Upload" section of the Sandbox Zenodo:
 
 <p style="text-aligh:center">
-<img heigh=110 src="./Upload.png">
+<img heigh=120 src="./Upload.png">
 </p>
 
 To get the DOI badge, click on the new uploaded file:
 
 <p style="text-aligh:center">
-<img heigh=90 src="./DOI.png">
+<img heigh=80 src="./DOI.png">
 </p>
 
 
