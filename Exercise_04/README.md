@@ -5,7 +5,11 @@ In this exercise we learn how to:
 
 You first need to use the EGI Check-In (e.g.: https://aai.egi.eu/fedcloud/) to generate a new OIDC Access Token.
 
-Save the “ClientID”, “Client Secret” and “Refresh Token” in environment variables.
+<p style="text-aligh:center">
+<img heigh=100 src="./EGI_AAI.png">
+</p>
+
+Save `ClientID`, `Client Secret` and `Refresh Token` in the environment variables.
 
 ### Hands-on
 
