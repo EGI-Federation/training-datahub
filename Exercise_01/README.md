@@ -1,4 +1,4 @@
-# Exercise no.01 - Testing oneclient from the “oneclient" Docker container
+# Exercise no.01 - Testing the client from the “oneclient" Docker container
 
 In this exercise we learn how to 
 * Use the Docker container with the already installed oneclient (see below `sudo docker run` command).
