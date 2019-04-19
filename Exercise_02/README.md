@@ -16,7 +16,7 @@ In this exercise we learn how to:
 ## Dataset
 The datasets to be analysed are available in the volume space (EGI Foundation/CSV/stock.csv) and have the following structure:
 
-Add figure here..
+
 
 In column B are reported the final values of the Apple stock at the end of the day.
 
