@@ -42,7 +42,7 @@ Oneclient has been successfully mounted in '/mnt/oneclient'.
 </pre>
 
 Now, it is possible to use the following mount points:
-* `/mnt/oneclient_your_account`,  the Onedata spaces
+* `/mnt/oneclient`,  the Onedata spaces
 * `<pre>/mnt/src/`, the local directory (any absolute path cloud have been used instead of $PWD that points to the working directory)
 
 
