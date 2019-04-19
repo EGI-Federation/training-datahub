@@ -9,7 +9,7 @@ In this exercise we learn how to:
 * Generate the token to access the Onedata volume space (see section before).
 
 ## Configure the environment settings
-The following variables have to be exported in the Docker container:
+The following variables have to be exported before to launch the container:
 
 <b>ONECLIENT_ACCESS_TOKEN</b>: Access token allowing to access all the spaces.</br>
 <b>ONECLIENT_PROVIDER_HOST</b>: Name or IP of the Oneprovider the client should connect to.
@@ -41,7 +41,7 @@ Getting configuration...
 Oneclient has been successfully mounted in '/mnt/oneclient'.
 </pre>
 
-## Install missing libraries
+## Install missing libraries in the container
 
 <pre>
 ]$ apt-get update
@@ -49,6 +49,8 @@ Oneclient has been successfully mounted in '/mnt/oneclient'.
 ]$ python -m pip install -U pip
 ]$ pip install ‘matplotlib==1.5.3’ requests
 </pre>
+
+<b>IMPORTANT NOTICE: If you need additional libraries, feel free to install them using the Python Package Manager (pip), or the apt-get command.</b>
 
 ## Mount the volume space 
 
