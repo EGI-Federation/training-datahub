@@ -58,7 +58,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> headers = {'X-Auth-Token': 'egi:%s' %oidc_token,
 >>>            'Content-type': 'application/json'}
 
->>>curl = requests.post(url=url, headers=headers)
+>>> curl = requests.post(url=url, headers=headers)
 
 >>> if curl.status_code == 200:
 >>>        data = curl.json()
