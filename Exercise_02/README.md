@@ -13,7 +13,7 @@ In this exercise we learn how to:
 
 <b>IMPORTANT NOTICE: We are using Python (v2.7.12) and the following libraries: `requests`, `csv` and `matplotlib (v1.5.3)` to analyse the datasets. If you are confident with other programming language and/or libraries, feel free to install additional libraries in the running container.</b>
 
-## Dataset
+## Stock datasets
 The datasets to be analysed are available in the volume space (EGI Foundation/CSV/stock.csv) and have the following structure:
 
 <p style="text-aligh:center">
