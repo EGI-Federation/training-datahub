@@ -9,7 +9,7 @@ In this exercise we learn how to:
 * Generate the token to access the Onedata volume space (see section before).
 
 ## Configure the environment settings
-Configure the environment variables before to launch the container. The following variables have to be exported in the Docker container:
+The following variables have to be exported in the Docker container:
 
 <b>ONECLIENT_ACCESS_TOKEN</b>: Access token allowing to access all the spaces.</br>
 <b>ONECLIENT_PROVIDER_HOST</b>: Name or IP of the Oneprovider the client should connect to.
