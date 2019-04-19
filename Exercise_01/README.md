@@ -41,6 +41,20 @@ Getting configuration...
 Oneclient has been successfully mounted in '/mnt/oneclient'.
 </pre>
 
+Now, it is possible to use the following mount points:
+# <pre>/mnt/oneclient</pre>: the Onedata spaces
+# <pre>/mnt/src/</pre>: the local directory (any absolute path cloud have been used instead of $PWD that points to the working directory)
+
+
+## Mount the volume space in the container
+
+<pre>
+]$ mkdir /mnt-<your-account>
+]$ oneclient /mnt-<your-account>
+</pre>
+
+<b>IMPORTANT NOTICE: The Onedata volume space that will be used for this training session is: "EGI Foundation/CSV"</b>.
+
 ## Install missing libraries in the container
 
 <pre>
@@ -52,11 +66,4 @@ Oneclient has been successfully mounted in '/mnt/oneclient'.
 
 <b>IMPORTANT NOTICE: If you need additional libraries, feel free to install them using the Python Package Manager (pip), or the apt-get command.</b>
 
-## Mount the volume space in the container
-
-<pre>
-]$ oneclient -o allow_other -o nonempty --force-proxy-io --force-fullblock-read /mnt
-</pre>
-
-<b>IMPORTANT NOTICE: The Onedata volume space that will be used for this training session is: "EGI Foundation/CSV"</b>.
 
