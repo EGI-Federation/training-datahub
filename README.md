@@ -12,8 +12,8 @@ This repository contains the exercises for the internal training on the EGI Data
 
 To generate your personal access token using the web interface, please follow these steps:
 * Log in the EGI DataHub service at: https://datahub.egi.eu/ using the [EGI AAI Check-In service](https://www.egi.eu/services/check-in/).
-* Click on the "ACCESS TOKENS" menu.
-* Clink on "Create new access token"
+* Click on the <b>"ACCESS TOKENS"</b> menu.
+* Clink on <b>"Create new access token"</b>
 * Store the token somewehere safe.
 
 How to generate your access token with REST API will be introduced in Exercise no.4
