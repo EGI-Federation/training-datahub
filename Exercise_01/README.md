@@ -20,11 +20,15 @@ Configure the environment variables before to launch the container. The followin
 ]$ export ONECLIENT_PROVIDER_HOST=plg-cyfronet-01.datahub.egi.eu
 </pre>
 
-<b><u>IMPORTANT NOTICE</u></b>: 
-Please remember to run the Docker container in “privileged” mode to use the FUSE library.
+<b><u>IMPORTANT NOTICE</u>: Please remember to run the Docker container in “privileged” mode to use the FUSE library.</b>
 
 <pre>
-]$ sudo docker run –it –-privileged -e ONECLIENT_ACCESS_TOKEN=$ONECLIENT_ACCESS_TOKEN -e ONECLIENT_PROVIDER_HOST=$ONECLIENT_PROVIDER_HOST -e MOUNT_POINT=$MOUNT_POINT -v $PWD:/mnt/src --entrypoint bash onedata/oneclient:18.02.0-rc13    
+]$ sudo docker run -it --privileged \
+                   -e ONECLIENT_ACCESS_TOKEN=$ONECLIENT_ACCESS_TOKEN \
+                   -e ONECLIENT_PROVIDER_HOST=$ONECLIENT_PROVIDER_HOST \
+                   -e MOUNT_POINT=$MOUNT_POINT \
+                   -v $PWD:/mnt/src --entrypoint bash onedata/oneclient:18.02.0-rc13    
+
 Unable to find image 'onedata/oneclient:18.02.0-rc13' locally
 18.02.0-rc11: Pulling from onedata/oneclient
 3b37166ec614: Pull complete
@@ -41,19 +45,18 @@ Oneclient has been successfully mounted in '/mnt/oneclient'.
 
 <pre>
 ]$ apt-get update
-]$ apt-get install –y vim wget python python-pip python-tk
-]$ python –m pip install –U pip
+]$ apt-get install -y vim wget python python-pip python-tk
+]$ python -m pip install -U pip
 ]$ pip install ‘matplotlib==1.5.3’ requests
 </pre>
 
 ## Mount the volume space 
 
 <pre>
-]$ oneclient –o allow_other -o nonempty -–force-proxy-io –-force-fullblock-read /mnt
+]$ oneclient -o allow_other -o nonempty --force-proxy-io --force-fullblock-read /mnt
 </pre>
 
-<b></u>IMPORTANT NOTICE:</u></b>
-The Onedata volume space that will be used for this training session is: <u>EGI Foundation/CSV</u>.
+<b></u>IMPORTANT NOTICE:</u>The Onedata volume space that will be used for this training session is: <u>EGI Foundation/CSV</u></b>.
 
 Access the maven project
 
