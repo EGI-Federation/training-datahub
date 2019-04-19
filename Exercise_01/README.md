@@ -42,15 +42,15 @@ Oneclient has been successfully mounted in '/mnt/oneclient'.
 </pre>
 
 Now, it is possible to use the following mount points:
-#`/mnt/oneclient`,  the Onedata spaces
-#`<pre>/mnt/src/`, the local directory (any absolute path cloud have been used instead of $PWD that points to the working directory)
+* `/mnt/oneclient`,  the Onedata spaces
+* `<pre>/mnt/src/`, the local directory (any absolute path cloud have been used instead of $PWD that points to the working directory)
 
 
 ## Mount the volume space in the container
 
 <pre>
-]$ mkdir /mnt-<your-account>
-]$ oneclient /mnt-<your-account>
+]$ mkdir /mnt_your_account
+]$ oneclient /mnt_your_account
 </pre>
 
 <b>IMPORTANT NOTICE: The Onedata volume space that will be used for this training session is: "EGI Foundation/CSV"</b>.
