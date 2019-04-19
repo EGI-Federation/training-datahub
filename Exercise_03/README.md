@@ -73,7 +73,7 @@ Type "help", "copyright", "credits" or "license" for more information.
            data=data, files=file)
 >>> print response.json()
 
-# Add some metadata to the file before upload
+### Add metadata to the file before upload
 
 >>> data = {
        'metadata': {
@@ -96,13 +96,13 @@ Type "help", "copyright", "credits" or "license" for more information.
 				    headers=headers)
 >>> print response.json()
 
-# Publish entry in Zenodo open-access repository
+### Publish entry in Zenodo open-access repository
 >>> file_uri = '%s/%s/actions/publish' % (zenodo_uri, deposition_id)
 >>> response = requests.post(file_uri, 
            params={'access_token': ZENODO_ACCESS_TOKEN})
 >>> print response.json()
 
-# Check the uploaded file in Zenodo open-access repository
+#### Check the uploaded file in Zenodo open-access repository
 
 Click on the "Upload" section of the Sandbox Zenodo:
 
