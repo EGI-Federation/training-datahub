@@ -27,7 +27,7 @@ Use your personal account to access the [EGI Training infrastructure](https://wi
 
 if you do not have a valid account, please contact: giuseppe <dot> larocca <at> egi.eu
 
-## Available Exercises
+## Exercises
 
 This repository includes the following exercises:
 - [Install the oneclient Docker container to access the volume space](Exercise_01)
