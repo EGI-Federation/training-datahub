@@ -1,4 +1,4 @@
-# Exercise no.01 - Testing oneclient from the “oneclient Docker” container
+# Exercise no.01 - Testing oneclient from the “oneclient" Docker container
 
 In this exercise we learn how to 
 * Use the Docker container with the already installed oneclient (see below `sudo docker run` command).
@@ -20,7 +20,7 @@ Configure the environment variables before to launch the container. The followin
 ]$ export ONECLIENT_PROVIDER_HOST=plg-cyfronet-01.datahub.egi.eu
 </pre>
 
-<b><u>IMPORTANT NOTICE</u>: Please remember to run the Docker container in “privileged” mode to use the FUSE library.</b>
+<b>IMPORTANT NOTICE: Please remember to run the Docker container in “privileged” mode to use the FUSE library.</b>
 
 <pre>
 ]$ sudo docker run -it --privileged \
@@ -41,7 +41,7 @@ Getting configuration...
 Oneclient has been successfully mounted in '/mnt/oneclient'.
 </pre>
 
-## Install missing librarie
+## Install missing libraries
 
 <pre>
 ]$ apt-get update
@@ -56,27 +56,5 @@ Oneclient has been successfully mounted in '/mnt/oneclient'.
 ]$ oneclient -o allow_other -o nonempty --force-proxy-io --force-fullblock-read /mnt
 </pre>
 
-<b></u>IMPORTANT NOTICE:</u>The Onedata volume space that will be used for this training session is: <u>EGI Foundation/CSV</u></b>.
-
-Access the maven project
-
-```cd di4r-training/jOCCI-dump-model/```
-
-Edit the source code in `src/main/java/it/infn/ct/Exercise1.java` to use your preferred VO and provider endpoint :
-```
-[..]
-String OCCI_ENDPOINT_HOST = "https://carach5.ics.muni.cz:11443"; // <= Change here!
-String VO = "training.egi.eu";  // <= Change here!
-```
-
-Compile and package with maven:
-```
-$ mvn compile && mvn package
-```
-
-Run (you may redirect the output to a file):
-```
-$ java –jar target/jocci-dump-model-1.0-jar-with-dependencies.jar
-```
-
+<b>IMPORTANT NOTICE: The Onedata volume space that will be used for this training session is: "EGI Foundation/CSV"</b>.
 
