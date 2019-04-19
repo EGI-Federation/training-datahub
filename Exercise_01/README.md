@@ -11,8 +11,8 @@ In this exercise we learn how to
 ## Configure the environment settings
 Configure the environment variables before to launch the container. The following variables have to be exported in the Docker container:
 
-ONECLIENT_ACCESS_TOKEN: Access token allowing to access all the spaces.
-ONECLIENT_PROVIDER_HOST: Name or IP of the Oneprovider the client should connect to.
+<b>ONECLIENT_ACCESS_TOKEN</b>: Access token allowing to access all the spaces.</br>
+<b>ONECLIENT_PROVIDER_HOST</b>: Name or IP of the Oneprovider the client should connect to.
 
 <pre>
 ]$ export MOUNT_POINT=/mnt
