@@ -4,7 +4,7 @@ This repository contains the exercises for the internal training on the EGI Data
 
 ## Requirements
 
-* A valid account to access the [EGI Training infrastructure] (https://wiki.egi.eu/wiki/Training_infrastructure)
+* A valid account to access the [EGI Training infrastructure](https://wiki.egi.eu/wiki/Training_infrastructure)
 * Basic knowledge of Linux user environment, Docker container and the "requests" library of Python are requested/
 * An access token to access the volume space in Onedata.
 
@@ -19,7 +19,7 @@ To generate your personal access token using the web interface, please follow th
 How to generate your access token with REST API will be introduced in Exercise no.4
 
 ## Access the EGI Training Infrastructure
-Use your personal account to access the [EGI Training infrastructure] (https://wiki.egi.eu/wiki/Training_infrastructure)
+Use your personal account to access the [EGI Training infrastructure](https://wiki.egi.eu/wiki/Training_infrastructure)
 
 ]$ ssh -X <your_user_account>@212.189.145.XX
 
@@ -31,7 +31,7 @@ This repository includes the following exercises:
 - [Install the oneclient Docker container to access the volume space](pyEGIAppDB)
 - [Analyse the datasets in the volume space](pyStock)
 - [Register the result of the analysis in Zenodo general-purpose open-access repository](pyZenodo)
-- [How to generate an ACCESS_TOKEN via REST API] (pyDataHub)
+- [How to generate an ACCESS_TOKEN via REST API](pyDataHub)
 
 ## Contribute
 - Fork it
