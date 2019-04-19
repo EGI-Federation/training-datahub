@@ -42,8 +42,8 @@ Oneclient has been successfully mounted in '/mnt/oneclient'.
 </pre>
 
 Now, it is possible to use the following mount points:
-# <pre>/mnt/oneclient</pre>: the Onedata spaces
-# <pre>/mnt/src/</pre>: the local directory (any absolute path cloud have been used instead of $PWD that points to the working directory)
+#<pre>/mnt/oneclient</pre>: the Onedata spaces
+#<pre>/mnt/src/</pre>: the local directory (any absolute path cloud have been used instead of $PWD that points to the working directory)
 
 
 ## Mount the volume space in the container
