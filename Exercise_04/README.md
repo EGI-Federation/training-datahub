@@ -1,50 +1,66 @@
-# Exercise no.04
-This is a Java library to render <a href="http://occi-wg.org/about/specification/">Open Cloud Computing Interface (OCCI)</a> queries.
-Detailed documentation is available in the project <a href="https://github.com/EGI-FCTF/jOCCI-api/wiki">wiki</a>.
+# Exercise no.04 - How to get an API access token via REST API
 
-## Compile and Run
+In this exercise we learn how to: 
+* Get an Access Token via REST API to access Onedata.
 
-Access the maven project
+You first need to use the EGI Check-In (e.g.: https://aai.egi.eu/fedcloud/) to generate a new OIDC Access Token.
 
-```cd di4r-training/jOCCI-dump-model/```
+Save the “ClientID”, “Client Secret” and “Refresh Token” in environment variables.
 
-Edit the source code in `src/main/java/it/infn/ct/Exercise1.java` to use your preferred VO and provider endpoint :
-```
-[..]
-String OCCI_ENDPOINT_HOST = "https://carach5.ics.muni.cz:11443"; // <= Change here!
-String VO = "training.egi.eu";  // <= Change here!
-```
+### Hands-on
 
-Compile and package with maven:
-```
-$ mvn compile && mvn package
-```
+In the Docker container open the Python console shell and do the following:
 
-Run (you may redirect the output to a file):
-```
-$ java –jar target/jocci-dump-model-1.0-jar-with-dependencies.jar
-```
+<pre>
+$ python
+Python 2.7.12 (default, Nov 12 2018, 14:36:49) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
 
+>>> import requests
+>>> client_id="insert your client id here"
+>>> client_secret="insert your client secret here"
+>>> refresh_token="insert your refresh token here"
+</pre>
 
-## Dependencies
+### Generate an OIDC Token from EGI Check-In
 
-jOCCI-dump-model uses:
-- jocci-api (v0.2.6)
-- slf4j-jdk14 (v1.7.12)
+<pre>
+>>> url = "https://aai.egi.eu/oidc/token"
+>>> payload = {'client_id': client_id, 
+>>>        'client_secret': client_secret,
+>>>        'grant_type': 'refresh_token',
+>>>        'refresh_token': refresh_token,
+>>>        'scope': 'openid email profile'}
 
-These are already included in the Maven pom.xml file and automatically downloaded when building.
+>>> curl = requests.post(url=url, 
+>>>        auth=(client_id, client_secret), data=payload)
 
-You can also add them to your projects with:
+>>> if curl.status_code == 200:
+>>>        data = curl.json()
+>>>        #print ("[ Server response ]")
+>>>        oidc_token=data["access_token"]
+>>> else:
+>>>        raise RuntimeError("Unable to get a valid OIDC token!")
+</pre>
 
-    <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-jdk14</artifactId>
-        <version>1.7.12</version>
-    </dependency>
+### Getting an API Access Token from ONEZONE_HOST
 
-    <dependency>
-        <groupId>cz.cesnet.cloud</groupId>
-        <artifactId>jocci-api</artifactId>
-        <version>0.2.6</version>
-        <scope>compile</scope>
-    </dependency>
+<pre>
+>>> onezone_host="https://datahub.egi.eu"
+>>> url = "%s/api/v3/onezone/user/client_tokens" %(onezone_host)
+
+>>> headers = {'X-Auth-Token': 'egi:%s' %oidc_token,
+>>>            'Content-type': 'application/json'}
+
+>>>curl = requests.post(url=url, headers=headers)
+
+>>> if curl.status_code == 200:
+>>>        data = curl.json()
+>>> else:
+>>>        raise RuntimeError("Unable to get valid token!")
+
+>>> data["token"]
+</pre>
+
