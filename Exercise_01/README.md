@@ -52,7 +52,7 @@ Oneclient has been successfully mounted in '/mnt/oneclient'.
 
 <b>IMPORTANT NOTICE: If you need additional libraries, feel free to install them using the Python Package Manager (pip), or the apt-get command.</b>
 
-## Mount the volume space 
+## Mount the volume space in the container
 
 <pre>
 ]$ oneclient -o allow_other -o nonempty --force-proxy-io --force-fullblock-read /mnt
