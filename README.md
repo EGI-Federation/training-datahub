@@ -5,13 +5,13 @@ This repository contains the exercises for the internal training on the EGI Data
 ## Requirements
 
 * A valid account to access the [EGI Training infrastructure](https://wiki.egi.eu/wiki/Training_infrastructure)
-* Basic knowledge of Linux user environment, Docker container and the "requests" library of Python are requested/
-* An access token to access the volume space in Onedata.
+* Basic knowledge of Linux user environment, [Docker container](https://docs.docker.com/engine/reference/commandline/container/) and the [requests](http://docs.python-requests.org/en/v2.7.0/) library of Python (v2.7.2+) are requested
+* An access token to access the volume space in Onedata
 
 ## Generate a token to access the Onedata volume space
 
 To generate your personal access token using the web interface, please follow these steps:
-* Log in the EGI DataHub service at: https://datahub.egi.eu/ using the EGI AAI Check-In service.
+* Log in the EGI DataHub service at: https://datahub.egi.eu/ using the [EGI AAI Check-In service](https://www.egi.eu/services/check-in/).
 * Click on the "ACCESS TOKENS" menu.
 * Clink on "Create new access token"
 * Store the token somewehere safe.
