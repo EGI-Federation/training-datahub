@@ -1,8 +1,59 @@
-# Exercise no.01
-This is a Java library to render <a href="http://occi-wg.org/about/specification/">Open Cloud Computing Interface (OCCI)</a> queries.
-Detailed documentation is available in the project <a href="https://github.com/EGI-FCTF/jOCCI-api/wiki">wiki</a>.
+# Exercise no.01 - Testing oneclient from the “client Docker” container
 
-## Compile and Run
+In this exercise we learn how to 
+* Use the Docker container with the already installed oneclient (see below <pre>`sudo docker run`</pre> command).
+* Mount the current working directory ($PWD) in the Docker container (under <pre>/mnt/src</pre>).
+
+## Requirements
+* Access the EGI Training infrastructure (see section before).
+* Generate the token to access the Onedata volume space (see section before).
+
+## Configure the environment settings
+Configure the environment variables before to launch the container. The following variables have to be exported in the Docker container:
+
+ONECLIENT_ACCESS_TOKEN: Access token allowing to access all the spaces.
+ONECLIENT_PROVIDER_HOST: Name or IP of the Oneprovider the client should connect to.
+
+<pre>
+]$ export MOUNT_POINT=/mnt
+]$ export ONECLIENT_ACCESS_TOKEN=’<Add here your access token>’
+]$ export ONECLIENT_PROVIDER_HOST=plg-cyfronet-01.datahub.egi.eu
+</pre>
+
+<b><u>IMPORTANT NOTICE</u></b>: 
+Please remember to run the Docker container in “privileged” mode to use the FUSE library.
+
+<pre>
+]$ sudo docker run –it –-privileged -e ONECLIENT_ACCESS_TOKEN=$ONECLIENT_ACCESS_TOKEN -e ONECLIENT_PROVIDER_HOST=$ONECLIENT_PROVIDER_HOST -e MOUNT_POINT=$MOUNT_POINT -v $PWD:/mnt/src --entrypoint bash onedata/oneclient:18.02.0-rc13    
+Unable to find image 'onedata/oneclient:18.02.0-rc13' locally
+18.02.0-rc11: Pulling from onedata/oneclient
+3b37166ec614: Pull complete
+[..]
+Digest: sha256:893c78b10878fd41360477c1ffac1e45dbbedd3d18ef401213bb81c3d132b
+Status: Downloaded newer image for onedata/oneclient:18.02.0-rc13
+[..]
+Connecting to provider 'plg-cyfronet-01.datahub.egi.eu:443' using session ID: '1993401975351113888'...
+Getting configuration...
+Oneclient has been successfully mounted in '/mnt/oneclient'.
+</pre>
+
+## Install missing librarie
+
+<pre>
+]$ apt-get update
+]$ apt-get install –y vim wget python python-pip python-tk
+]$ python –m pip install –U pip
+]$ pip install ‘matplotlib==1.5.3’ requests
+</pre>
+
+## Mount the volume space 
+
+<pre>
+]$ oneclient –o allow_other -o nonempty -–force-proxy-io –-force-fullblock-read /mnt
+</pre>
+
+<b></u>IMPORTANT NOTICE:</u></b>
+The Onedata volume space that will be used for this training session is: <u>EGI Foundation/CSV</u>.
 
 Access the maven project
 
@@ -26,25 +77,3 @@ $ java –jar target/jocci-dump-model-1.0-jar-with-dependencies.jar
 ```
 
 
-## Dependencies
-
-jOCCI-dump-model uses:
-- jocci-api (v0.2.6)
-- slf4j-jdk14 (v1.7.12)
-
-These are already included in the Maven pom.xml file and automatically downloaded when building.
-
-You can also add them to your projects with:
-
-    <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-jdk14</artifactId>
-        <version>1.7.12</version>
-    </dependency>
-
-    <dependency>
-        <groupId>cz.cesnet.cloud</groupId>
-        <artifactId>jocci-api</artifactId>
-        <version>0.2.6</version>
-        <scope>compile</scope>
-    </dependency>
