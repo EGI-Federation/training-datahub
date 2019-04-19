@@ -8,8 +8,8 @@ In this exercise we learn how to:
 
 ## Get your access token to access Zenodo open-access repository
 
-* Register for a Zenodo account if you don’t already have one at: [https://sandbox.zenodo.org/account/settings/applications/tokens/new here]. 
+* Register for a Zenodo account if you don’t already have one at: [here](https://sandbox.zenodo.org/account/settings/applications/tokens/new). 
 * Create the Register with your GitHub/ORCID account.
-* Go to https://sandbox.zenodo.org/account/settings/applications/ then click on "Personal access tokens" →  
+** Go to https://sandbox.zenodo.org/account/settings/applications/ then click on "Personal access tokens" →  
   "+ New token" this will be your ZENODO_ACCESS_TOKEN.
 * For the quick start tutorial you need the following Scopes: `deposit:write` and `deposit:actions`.
