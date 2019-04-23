@@ -49,8 +49,7 @@ Now, it is possible to use the following mount points:
 ## Mount the volume space in the container
 
 <pre>
-]$ mkdir /mnt/oneclient/your_account
-]$ oneclient /mnt/oneclient/your_account
+]$ oneclient /mnt/oneclient
 </pre>
 
 <b>IMPORTANT NOTICE: The Onedata volume space that will be used for this training session is: "EGI Foundation/CSV"</b>.
