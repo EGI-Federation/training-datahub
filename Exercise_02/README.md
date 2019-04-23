@@ -35,7 +35,7 @@ Hint2:
 In python run `matplotlib.use('agg')` before `matplotlib.pyplot` is imported anywhere, otherwise `plt.plot()` won't work.
 
 Hint3:
-Use `plt.savefig('fname.png')` to save figure in container.
-To copy file from the Docker container to your  VM account do: `sudo docker cp <containerId>:/file/path/within/container /host/path/target`  
-Use the `display` command to check the file image.
+* Use `plt.savefig('fname.png')` to save figure in container.
+* To copy file from the Docker container to your  VM account do: `sudo docker cp <containerId>:/file/path/within/container /host/path/target`  
+* Use the `display` command to check the file image.
 
