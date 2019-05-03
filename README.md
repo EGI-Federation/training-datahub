@@ -22,10 +22,10 @@ How to generate your access token with REST API will be introduced in Exercise n
 Use your personal account to access the [EGI Training infrastructure](https://wiki.egi.eu/wiki/Training_infrastructure)
 
 <pre>
-]$ ssh -X <your_user_account>@212.189.145.XX
+]$ ssh -X your_user_account@212.189.145.XX
 </pre>
 
-if you do not have a valid account, please contact: giuseppe <dot> larocca <at> egi.eu
+if you do not have a valid account, please contact: giuseppe.larocca@egi.eu
 
 ## Exercises
 
