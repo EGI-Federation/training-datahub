@@ -27,6 +27,7 @@ The following variables have to be exported before to launch the container:
                    -e ONECLIENT_ACCESS_TOKEN=$ONECLIENT_ACCESS_TOKEN \
                    -e ONECLIENT_PROVIDER_HOST=$ONECLIENT_PROVIDER_HOST \
                    -e MOUNT_POINT=$MOUNT_POINT \
+                   --name <use_memorable_name> \
                    -v $PWD:/mnt/src --entrypoint bash onedata/oneclient:18.02.0-rc13    
 
 Unable to find image 'onedata/oneclient:18.02.0-rc13' locally
