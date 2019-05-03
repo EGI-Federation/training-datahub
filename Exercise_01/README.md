@@ -60,7 +60,7 @@ Now, it is possible to use the following mount points:
 ]$ apt-get update
 ]$ apt-get install -y vim wget python python-pip python-tk
 ]$ python -m pip install -U pip
-]$ pip install ‘matplotlib==1.5.3’ requests
+]$ pip install 'matplotlib==1.5.3' requests
 </pre>
 
 <b>IMPORTANT NOTICE: If you need additional libraries, feel free to install them using the Python Package Manager (pip), or the apt-get command.</b>
